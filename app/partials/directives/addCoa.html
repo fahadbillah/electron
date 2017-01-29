@@ -1,0 +1,27 @@
+<span>
+	<i class="fa fa-plus" ng-click="toggleCOAForm(value.id)"></i>
+	<div class="custom-modal-overlay" ng-show="showCOAForm">
+		<div class="col-md-6 col-md-offset-3">
+			<form class="form-horizontal" ng-submit="coaItemSubmit(coaItem)">
+				<input type="text" style="display: none;" ng-value="">
+				<div class="control-group">
+					<label>Name of Chart of Accounts</label>
+					<input type="text" class="form-control" name="name" ng-model="coaItem.name">
+				</div>
+				<div class="control-group">
+					<label>Type</label>
+					<select class="form-control" ng-model="coaItem.name">
+						<option>Asset</option>
+						<option>Liability & Equity</option>
+						<option>Revenue</option>
+						<option>Expense</option>
+					</select>
+				</div>
+				<div class="control-group">
+					<button type="submit" class="btn btn-primary">Submit</button>
+					<button type="button" ng-click="toggleCOAForm()" class="btn btn-default">Cancel</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</span>
